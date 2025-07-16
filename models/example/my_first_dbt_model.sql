@@ -7,7 +7,10 @@
     Try changing "table" to "view" below
 */
 
-{{ config(materialized='table') }}
+{{ config(
+    tags=["weekly"],
+    materialized="table"
+) }}
 
 WITH base AS (
 
